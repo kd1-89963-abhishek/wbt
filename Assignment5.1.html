@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        function getnum(){
+            while(true){
+                let num=prompt("Enter the positive number : ")
+                if(num!=null && num!=isNaN && num>0 )
+                return num
+                 else
+                 window.alert("Enter a Valid Positive Number ")
+            }
+        }
+
+        const num1=getnum()
+        const num2=getnum()
+        const num3=getnum()
+
+           
+
+
+         if(num1>num2 && num1>num3){
+         window.alert("The Gratest Number = "+num1)
+         }else if(num2>num1 && num2>num3){
+            window.alert("The Greatest Number is = "+num2)
+              }else
+                window.alert("The Greatest Number is = "+num3)
+              
+
+
+    </script>
+</body>
+</html>

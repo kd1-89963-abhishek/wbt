@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 6</title>
+  <style>
+    .font{
+    
+        color: red;
+        font-size:x-large ;
+        font-weight: bold;
+
+
+
+    }
+  </style>
+   
+</head>
+<body>
+    <h1>Date & Greeting Web Page</h1>
+    <div id="d1" class="font">
+
+    </div>
+  
+    <script>
+
+    
+        let e=new Date()
+        let e1=e.getDate()
+        console.log(e1)
+
+
+        let c=new Date()
+        let c1=c.getHours()
+        console.log(c1)
+        let c2;
+        if(c1<12) {
+            c2="Good Morning"
+        } else if(c1>12) {
+            c2="Good Afternoon"
+        } else {
+            c2="Good night"
+        }
+        
+        let d=new Date()
+        let a=d.toDateString()
+        let d1=new Date("2025-12-31")
+
+        const diff= d1-d
+        const days=Math.floor(diff/(1000*60*60*24))
+        console.log(d1)
+        console.log(a)
+        const b= document.getElementById("d1")
+        b.innerHTML= "Today is "+a+",<br> Welcome, and "+c2+" to You.<br>"+" Number of days till end of year: "+days
+        
+        
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <div style="justify-items: center;">
+    <h1>Calculator</h1>
+    </div>
+    <div style="justify-items: center; margin-top: 20mm;">
+        <table class="table table-dark table-striped" style="width: 100mm;">
+
+            <thead></thead>
+            <tbody>
+                <tr>
+                <td colspan="4">Enter Number 1</td>
+                <td colspan="4"> <input id="num1" type="number" placeholder="Enter Value"></td>
+                </tr>
+                <tr>
+                <td colspan="4">Enter Number 2</td>
+                <td colspan="4"><input id="num2" type="number" placeholder="Enter Value"></td>
+                </tr>
+                <tr>
+                <td colspan="4">Result</td>
+                <td id="result" colspan="4"><input id="num3" type="text" placeholder="Result"> </td>
+                </tr>
+                <tr>
+                    <td colspan="2"><button class="btn btn-success" onclick="add()">Addition</button></td>
+                    <td colspan="2"><button class="btn btn-success" onclick="sub()">Substraction</button></td>
+                    <td colspan="2"><button class="btn btn-success" onclick="mul()">Multiplication</button></td>
+                    <td colspan="2"><button class="btn btn-success" onclick="div()">Division</button></td>
+                </tr>
+
+                <script>
+                    
+                    function add(){
+                    let num01=document.getElementById("num1").value
+                    let num02=document.getElementById("num2").value 
+                    let result=document.getElementById("result") 
+
+                    num001=parseInt(num01)
+                    console.log(num001)
+                    num002=parseInt(num02)
+                    console.log(num002)
+                
+                        
+                        r=num001+num002
+                       result.innerText =r
+                    }
+
+
+                    function sub(){
+                        let num01=document.getElementById("num1").value
+                    let num02=document.getElementById("num2").value 
+                    let result=document.getElementById("result") 
+                    num001=parseInt(num01)
+                    console.log(num001)
+                    num002=parseInt(num02)
+                    console.log(num002)
+                
+                        
+                        r=num001-num002
+                       result.innerText =r
+                      }
+
+                      function mul(){
+                        let num01=document.getElementById("num1").value
+                    let num02=document.getElementById("num2").value 
+                    let result=document.getElementById("result") 
+                    num001=parseInt(num01)
+                    console.log(num001)
+                    num002=parseInt(num02)
+                    console.log(num002)
+                
+                        
+                        r=num001*num002
+                       result.innerText =r
+
+                    }
+
+                    function div(){
+                        let num01=document.getElementById("num1").value
+                    let num02=document.getElementById("num2").value 
+                    let result=document.getElementById("result") 
+                    num001=parseInt(num01)
+                    console.log(num001)
+                    num002=parseInt(num02)
+                    console.log(num002)
+                
+                        
+                        r=num001/num002
+                       result.innerText =r
+                    
+            
+
+
+                    }
+                </script>
+
+            </tbody>
+        </table>
+
+    </div>
+    
+</body>
+</html>

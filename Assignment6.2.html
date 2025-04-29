@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+   
+        <h1>Enter Employee names</h1>
+    <div style="display: inline-block;">
+        <input id="name" type="text" placeholder="Enter Employee Name">
+        <button onclick="AddName()">Add Name</button><button onclick="Sort()">Sort & Display</button>
+
+
+    </div>
+    <hr>
+    <div>
+       <!-- <h2> Names</h2>
+       
+        <ul id="body">
+
+        </ul> -->
+
+        <h2> Sorted Names</h2>
+       
+        <ul id="body1">
+
+        </ul>
+
+
+    </div>
+
+    <script>
+        let arr=[]
+        let a=document.getElementById("body")
+        let a2=document.getElementById("body1")
+
+        function AddName(){
+       
+       { //console.log(a)
+        let b=document.getElementById("name").value
+        console.log(b)
+          let c=`<li>${b}</li>`
+          if(arr.length<6){
+         //   a.innerHTML+=c 
+          arr.push(b)
+
+        }
+        else{
+            alert("Already Entered 6 Entries")
+        }
+    }
+        //   console.log(arr)
+
+        }
+
+        function Sort()
+        {
+            arr.sort()
+            console.log(arr)
+            let a1
+            for(a1 of arr){
+                console.log(a1)
+                let c1=`<li>${a1}</li>`
+                a2.innerHTML+=c1
+
+            }
+
+
+        }
+    </script>
+    
+</body>
+</html>

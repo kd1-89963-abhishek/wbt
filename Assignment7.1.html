@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Formt</title>
+</head>
+<body>
+
+
+    <table align="center" border="0">
+        <tr>
+            <td>
+                <img src="/Screenshot 2025-04-18 161246.png">
+                  <h1 align="center">Sunbeam Registration Form</h1>
+            </td>
+        </tr>
+    </table>
+
+    <table border="2" align="center">
+        <tr>
+            <td rowspan="10"><iframe width="560" height="315" src="https://www.youtube.com/embed/02q9aAVv1NI?si=cJJakea8VyuXlgkJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></td>
+            <td>Name</td>
+            <td><input id="name" type="text" maxlength="20"></td>
+            <td style="color: red;" id="name1" colspan=""></td>
+        </tr>
+        <tr>
+            <td>Birth Date</td>
+            <td><input type="date" id="date"></td>
+            <td id="date1" style="color: red;"></td>
+    
+        </tr>
+        <tr>
+            <td>Email</td>
+            <td><input type="email" id="mail"></td>
+            <td id="mail1" style="color: red;"></td>
+        </tr>
+        <tr>
+            <td>Password</td>
+            <td><input type="password" id="pass" ></td>
+            <td id="pass1" style="color: red;"></td>
+        </tr>
+        <tr>
+            <td>Address</td>
+            <td><input type="text" id="add" ></td>
+            <td style="color: red;" id="add1"></td>
+        </tr>
+        <tr>
+            <td>Gender</td>
+            <td><input type="radio" name="gender" id="g1" >Male
+            <input type="radio" name="gender" id="g2">Female</td>
+            <td id="g3" style="color: red;"></td>
+        </tr>
+        <tr>
+            <td>Upload Photo</td>
+            <td><input type="file" id="pic"></td>
+            <td id="pic1" style="color: red;"></td>
+        </tr>
+        <tr>
+            <td><label>Select Your Course</label></td>
+            <td> <select id="ddlView">
+                <option value="0">Select</option>
+                <option value="1">DAC</option>
+                <option value="2">DBDA</option>
+                <option value="3">DMC</option>
+                </select> </td>
+           
+            <td id="c4" style="color: red;"></td>
+            
+        </tr>
+        <tr>
+            <td>Skill Set</td>
+            <td><input type="checkbox" id="s1">Java
+            <input type="checkbox" id="s2"> C++
+            <input type="checkbox" id="s3"> C
+            </td>
+            <td id="s4" style="color: red;"></td>
+        </tr>
+
+
+        <tr>
+            <td></td>
+            
+            <td> <button onclick="valid()">Register</button>
+                <input type="reset" value="Clear"></td>
+             
+        </tr>
+   
+    </table>
+
+    <script>
+
+    
+    function valid(){
+        
+
+        let a1=document.getElementById("name1")
+        let b1=document.getElementById("name").value
+
+        if(b1 === "" || b1.length>10) {
+        const b="Only alphabets allowed, max 10 chars"
+          a1.textContent= b
+        }else{
+            const b=""
+            a1.textContent= b
+
+        }
+
+        let a2=document.getElementById("pass1")
+        let b2=document.getElementById("pass").value
+
+        if(b2.length<8 || b2==="" || !b2.includes("#"))
+        {
+            const c="Password Should be greater then 8 chars"
+            a2.textContent= c
+        }else{
+            const c=""
+            a2.textContent= c
+        }
+
+        let a3=document.getElementById("mail").value
+        let b3=document.getElementById("mail1")
+
+        if(a3 === ""){
+            const c="Email is required "
+            b3.textContent=c
+
+        }else{
+            const c=" "
+            b3.textContent=c
+        }
+
+        let a4=document.getElementById("add").value
+        let b4=document.getElementById("add1")
+
+        if(a4===""){
+            const c= "Address is Required "
+            b4.textContent = c
+        }else{
+            const c= " "
+            b4.textContent = c
+
+        }
+
+        let a5=document.getElementById("g1")
+        let a6=document.getElementById("g2")
+        let b5=document.getElementById("g3")
+       
+        if (a5.checked) {
+                document.getElementById("g3").innerHTML
+                    =" ";
+            }
+            else if (a6.checked) {
+                document.getElementById("g3").innerHTML
+                    = " ";
+            }
+            else
+            {
+                document.getElementById("g3").innerHTML="Radio button Unchecked"
+            }
+
+            let a7=document.getElementById("pic")
+            const file = a7.files[0]
+            let b7=document.getElementById("pic1")
+            if(!file)
+            {
+                b7.innerHTML="Please Insert a file"
+                
+            }
+            else
+                b7.innerHTML=" "
+
+
+           
+
+
+        let a9=document.getElementById("s1")
+        let a10=document.getElementById("s2")
+        let b9=document.getElementById("s3")
+       
+        if (document.getElementById("s1").checked) {
+                document.getElementById("s4").innerHTML
+                    =" ";
+            }
+            else if (a10.checked) {
+                document.getElementById("s4").innerHTML
+                    = " ";
+            }
+            else if (b9.checked) {
+                document.getElementById("s4").innerHTML
+                    = " ";
+            }
+            else
+            {
+                document.getElementById("s4").innerHTML="Radio button Unchecked"
+            }
+
+
+
+           const indate= document.getElementById("date").value
+           const dob=new Date(indate)
+           const cur=new Date()
+
+           const age= cur.getFullYear() - dob.getFullYear()
+           const m=cur.getMonth() - dob.getMonth()
+           const day= cur.getDate(0) -dob.getDate()
+
+
+           if(age<18){
+            document.getElementById("date1").innerHTML="You must be atleast 18 "
+           }
+           else{
+            document.getElementById("date1").innerHTML=""
+           }
+
+
+
+           var e = document.getElementById("ddlView");
+             var strUser = e.options[e.selectedIndex].value;
+
+              var strUser1 = e.options[e.selectedIndex].text;
+            if(strUser==0)
+             {
+            document.getElementById("c4").innerHTML="Select a course !!"
+            }
+            else{
+                document.getElementById("c4").innerHTML=" "
+            }
+
+                }
+    
+
+
+    
+        
+        
+
+        
+    
+        
+        
+
+    </script>
+    
+</body>
+</html>

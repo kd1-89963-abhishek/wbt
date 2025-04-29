@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+    function getnum(){
+        while(true){
+        let num=prompt("Enter the Range of Number -")
+            if(num>0 && num!=null && num!=NaN)
+            return num
+            else
+            window.alert("Enter Valid Positive Number")
+        }
+
+    }
+
+    let num1=getnum()
+    let arr=[]
+
+    
+    for(let i=1;i<=num1;i++){
+        if(i%2==0){
+            arr.push(i)
+            
+        }
+
+    }
+    console.log("The Even Number upto "+ num1+ " = "+arr)
+
+</script>
+    
+</body>
+</html>

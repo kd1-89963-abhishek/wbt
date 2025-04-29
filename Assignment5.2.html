@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        function getnum(){
+            while(true){
+            let a=prompt("Enter No of times to be printed")
+            if(a>0 && a!=null && a!=isNaN)
+            return a
+            else
+            window.alert("Enter a valid number ")}
+        }
+        const a1=getnum()
+
+        const b=prompt("Enter the Line to be Printed - ")
+        if(a!=null){
+            var c=0;
+            for(i=0;i<a1;i++){
+                console.log(b)
+                console.log(c++)
+            }
+        }
+    </script>
+    
+</body>
+</html>
